@@ -15,5 +15,3 @@ class PartnerwiseUmo(models.Model):
     product_uom_id = fields.Many2one('uom.uom', string='UOM',domain="[('category_id','=', product_uom_category)]")
     
     #uom_category_id = fields.Many2one(related='product_id.uom_id.category_id')
-
-    
