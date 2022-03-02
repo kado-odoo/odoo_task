@@ -14,9 +14,7 @@
     # Dependency
     'data':[
         'views/res_partner_view.xml',
-        'security/ir.model.access.csv',
-        'reports/sale_report.xml',
-        'reports/sale_report_templet.xml'
+        'security/ir.model.access.csv'
         ],
     'depends':['sale_management','stock','purchase'],
     'demo':[],

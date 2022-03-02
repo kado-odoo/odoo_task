@@ -1,2 +1,0 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-product_in_sales_order_custom.access_partnerwise_umo,access_partnerwise_umo,product_in_sales_order_custom.model_partnerwise_umo,base.group_user,1,1,1,1

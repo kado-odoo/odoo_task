@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Inhetit Res Partner From View -->
+    <record id="res_partner_form_inherit_credit" model="ir.ui.view">
+        <field name="name">res.partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="credit_limit"/>
+                <field name="total_receivable"/>
+            </xpath>
+        </field>
+
+    </record>
+</odoo>

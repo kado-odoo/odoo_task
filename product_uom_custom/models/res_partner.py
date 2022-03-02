@@ -9,5 +9,4 @@ class ResPartner(models.Model):
     #Fields Declaration
     #---------------------------
     
-    partnerwise_umo_ids = fields.One2many('partnerwise.umo' , 'partner_id' ,widget="section_and_note_one2many")
-    
+    partnerwise_umo_ids = fields.One2many('partnerwise.umo' , 'partner_id')
