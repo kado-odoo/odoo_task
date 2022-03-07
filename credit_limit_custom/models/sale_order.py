@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from unittest import result
-from odoo import models, api , _
-from odoo.exceptions import ValidationError
+
+from odoo import models, api
+from odoo.exceptions import UserError
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
@@ -13,10 +13,10 @@ class SaleOrder(models.Model):
     
     def action_confirm(self):
         if self.amount_total > self.partner_id.credit_limit:
-            raise ValidationError(_('Credit Limit Exceeded! You need to increase the credit limit of this customer to proceed'))
+            raise UserError('Credit Limit Exceeded! You need to increase the credit limit of this customer to proceed')
         return super(SaleOrder, self).action_confirm()
     
-    def _prepare_invoice(self):
+    def _create_invoices(self, grouped=False, final=False):
         if self.amount_total > self.partner_id.credit_limit:
-            raise ValidationError(_('Credit Limit Exceeded! You need to increase the credit limit of this customer to proceed'))
-        return super(SaleOrder, self)._prepare_invoice()
+            raise UserError("Credit Limit Exceeded!")
+        return super(SaleOrder, self)._create_invoices(grouped, final)
