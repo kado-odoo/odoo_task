@@ -5,7 +5,6 @@ class StockMove(models.Model) :
     
     _inherit = 'stock.move'
     
-    
     #---------------------------
     #Method Declaration
     #---------------------------

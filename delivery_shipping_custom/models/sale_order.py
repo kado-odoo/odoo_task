@@ -31,13 +31,9 @@ class SaleOrder(models.Model):
     # def _onchange_commitment_date(self):
     #     for record in self:
     #         record.commitment_date = record.requested_date - timedelta(days=record.partner_id.days_to_deliver)
+    
     # def action_confirm(self):
     #     record = super(SaleOrder , self).action_confirm()
     #     for picking in self.picking_ids:
     #         picking.appointment_date = self.requested_date
     #     return record
-
-    
-
-
-    
