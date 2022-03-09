@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Sale Order Report -->
+    <template id="inherit_field_in_sale_order_report" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//th[@name='th_discount']" position="after">
+            <th class="text-right">2nd Disc. %</th>
+        </xpath>
+
+        <xpath expr="//td[@name='td_taxes']" position="before">
+            <td name="td_taxes" class="text-right">
+                <span t-field="line.second_discount"/>
+            </td>
+        </xpath>
+    </template>
+</odoo>

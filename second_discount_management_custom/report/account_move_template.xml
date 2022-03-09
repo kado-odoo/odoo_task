@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit account invoice report -->
+    <template id="inherit_field_in_account_move_report" inherit_id="account.report_invoice_document">
+        <xpath expr="//th[@name='th_price_unit']" position="after">
+            <th class="text-right">2nd Disc.%</th>
+        </xpath>
+
+        <xpath expr="//td[@t-if='display_discount'][1]" position="before">
+            <td name="td_priceunit" class="text-right">
+                <span t-field="line.second_discount"/>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>

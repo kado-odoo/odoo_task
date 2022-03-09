@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!--Inhetit Sale Order  Line From View -->
+    <record id="sale_order_form_inherit_delivery" model="ir.ui.view">
+        <field name="name">sale.order</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree/field[@name='discount']" position="after">
+                <field name="second_discount"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
