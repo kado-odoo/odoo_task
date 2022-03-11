@@ -1,9 +1,9 @@
 {
     #  Information
-    'name':'Separation Of Project Sub Task',
+    'name':'Project Sub Task',
     'version': '15.0',
-    'summary': 'Separation Of Project Sub Task',
-    'description':'Separation Of Project Sub Task',
+    'summary': 'Project Sub Task',
+    'description':'Project Sub Task',
     'category':'',
 
     # Author
