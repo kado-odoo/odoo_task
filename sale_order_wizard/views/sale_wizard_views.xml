@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inhetit Sale Order Form View -->
+    <record id="sale_wizard_views_id" model="ir.ui.view">
+        <field name="name">sale.order</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//header//button[@name='action_draft']" position="after">
+                <button name="%(sale_order_wizard.action_view_sale_wizard)d" string=" COMFIRM WIZARD" type="action"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

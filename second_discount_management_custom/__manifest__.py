@@ -17,6 +17,7 @@
         'views/account_move_line_views.xml',
         'report/sale_order_template.xml',
         'report/account_move_template.xml',
+        'data/mail_template.xml',
         ],
     'depends':['sale_management'],
     'demo':[],

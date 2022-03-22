@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.sale</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10" />
+        <field name="inherit_id" ref="sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='sale_management']/div[2]" position="after">
+                <h2>Other Info</h2>
+                <div class="row mt16 o_settings_container" name="catalog_setting_container">
+                    <div class="col-12 col-lg-6 o_setting_box" id="sale_user_b">
+                        <div class="o_setting_left_pane">
+                            <field name="is_sale_user" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_sale_user" string=" Is Sale User" />
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="user_id_b">
+                        <div class="o_setting_left_pane" />
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Users</span>
+                            <div class="text-muted">
+                                    Res users
+                                </div>
+                            <div class="text-muted">
+                                <field name="sale_parson" context="{'default_detailed_type': 'service'}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </xpath>
+        </field>
+    </record>
+
+    <!-- <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.user</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="15"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="User Department" string="User Department" data-key="res_config_settings_custom">
+                    <h2>User Department</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Salary</span>
+                                <div class="text-muted content-group mt16">
+                                    <field name="sale_user" class="text-center oe_inline" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record> -->
+
+    <record id="action_sale_config_settings" model="ir.actions.act_window">
+        <field name="name">User Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form" />
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'res_config_settings_custom'}</field>
+    </record>
+</odoo>
