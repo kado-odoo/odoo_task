@@ -20,4 +20,3 @@ class SaleOrderLine(models.Model):
             if self.second_discount:
                 self.price_subtotal = self.price_subtotal - ((self.second_discount*self.price_subtotal)/100)
         return rec
-

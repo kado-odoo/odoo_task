@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Inherit Account Move Form View -->
     <record id="account_move_line_view_inherit" model="ir.ui.view">
         <field name="name">account.move</field>
         <field name="model">account.move</field>
