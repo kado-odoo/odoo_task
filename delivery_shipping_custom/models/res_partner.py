@@ -8,4 +8,4 @@ class ResPartner(models.Model):
     #---------------------------
     #Fields Declaration
     #---------------------------
-    days_to_deliver = fields.Integer()
+    days_to_deliver = fields.Integer(String='Day To Diliver')
