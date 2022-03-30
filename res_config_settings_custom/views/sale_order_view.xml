@@ -11,6 +11,5 @@
                 <field name="sale_parson" attrs="{'invisible':[('is_sale_user', '!=', True)]}"/>
             </xpath>
         </field>
-
     </record>
 </odoo>

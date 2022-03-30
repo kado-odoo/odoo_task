@@ -16,7 +16,7 @@ class SaleOrder(models.Model):
     #Method Declaration
     #---------------------------
     
-    @api.depends('name')
+    @api.depends('sale_parson')
     def _check_user_from_settings(self):
         for res in self:
             res.is_sale_user = self.env['ir.config_parameter'].sudo().get_param('res_config_settings_custom.is_sale_user')
