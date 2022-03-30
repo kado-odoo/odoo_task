@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 {
     #  Information
     'name':'Zero Stock Blockage',
@@ -15,8 +14,6 @@
     
     # Dependency
     'data':[
-        # 'security/security_group.xml',
-        # 'security/ir.model.access.csv',
         'views/sale_order_view.xml'
     ],
     'depends':['sale_management','stock'],

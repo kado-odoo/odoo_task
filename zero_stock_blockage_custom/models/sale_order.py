@@ -25,4 +25,3 @@ class SaleOrder(models.Model):
     @api.depends('zero_stock_approval','user_group_Chack')
     def _check_user_group(self):
         self.user_group_Chack = self.env.user.has_group('sales_team.group_sale_manager')
-            
