@@ -1,9 +1,9 @@
 {
     #  Information
-    'name':'Sale Order',
+    'name':'Sale Order Custom',
     'version': '15.0',
-    'summary': 'Sale Order',
-    'description':'Sale Order',
+    'summary': 'Sale Order Custom',
+    'description':'Sale Order Custom',
     'category':'',
 
     # Author

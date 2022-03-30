@@ -7,6 +7,7 @@
                 <form string="Sale Order Wizard">
                     <footer>
                         <button name="confirm_sale" string="CONFIRM" class="btn-primary" type="object"/>
+                        <button name="print_report" string="Print Report" class="btn-primary" type="object"/>
                         <button string="Cancel" class="btn-secondary" special="cancel"/>
                     </footer>
                 </form>
