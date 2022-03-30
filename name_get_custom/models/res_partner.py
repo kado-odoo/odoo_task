@@ -5,6 +5,10 @@ from odoo import api, fields, models
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
+    #---------------------------
+    #Method Declaration
+    #---------------------------
+    
     def name_get(self):
         res = []
         for partner in self:
@@ -18,5 +22,4 @@ class ResPartner(models.Model):
         domain = []
         if name:
             domain = ['|', '|', ('name',operator,name),('phone',operator,name),('email',operator,name)]
-        return self._search(domain + args, limit=limit, access_rights_uid = name_get_uid    )
-        
+        return self._search(domain + args, limit=limit, access_rights_uid = name_get_uid)

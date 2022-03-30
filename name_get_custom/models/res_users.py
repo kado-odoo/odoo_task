@@ -2,10 +2,13 @@
 
 from odoo import api, models, modules
 
-class Users(models.Model):
+class ResUsers(models.Model):
     _name = 'res.users'
     _inherit = ['res.users']
     
+    #---------------------------
+    #Method Declaration
+    #---------------------------
     def name_get(self):
         res = []
         for user in self:

@@ -1,9 +1,9 @@
 {
     #  Information
-    'name':'Name Get',
+    'name':'Name Get Custom',
     'version': '15.0',
-    'summary': 'Name Get',
-    'description':'Name Get',
+    'summary': 'Name Get Custom',
+    'description':'Name Get Custom',
     'category':'',
 
     # Author
