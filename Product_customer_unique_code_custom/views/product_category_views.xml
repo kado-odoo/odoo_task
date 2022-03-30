@@ -10,6 +10,5 @@
                 <field name="assign_sequence"/>
             </xpath>
         </field>
-
     </record>
 </odoo>

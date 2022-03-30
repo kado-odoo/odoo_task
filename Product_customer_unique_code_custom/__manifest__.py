@@ -15,8 +15,6 @@
     
     # Dependency
     'data':[
-        # 'security/security_group.xml',
-        # 'security/ir.model.access.csv',
         'views/product_category_views.xml',
         'data/sequence.xml',
     ],
