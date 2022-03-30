@@ -21,5 +21,4 @@ class MrpWorkorder(models.Model):
                    
     def button_done_mycase(self):
         for order in self:
-            if order.is_user_working:
-                order.button_finish()
+            order.button_finish()
