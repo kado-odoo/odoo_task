@@ -4,7 +4,7 @@
     'version': '15.0',
     'summary': 'Project Sub Task',
     'description':'Project Sub Task',
-    'category':'',
+    'category':'Custom',
 
     # Author
     'author': 'Odoo Ps',
